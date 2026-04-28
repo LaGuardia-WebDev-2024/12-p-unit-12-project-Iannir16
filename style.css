@@ -1,5 +1,5 @@
 #movie-result {
-  background: rgb(244, 98, 181);
+  background: rgba(55, 139, 52, 0.336);
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
@@ -8,7 +8,7 @@
 }
 
 #book-result {
-  background: rgb(196, 159, 255);
+  background: rgba(126, 66, 26, 0.425);
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
@@ -19,4 +19,20 @@
 hr {
   height: 5px;
   background-color: black;
+}
+
+body{
+  background-image: url(https://www.childnet.com/wp-content/uploads/2025/06/apps.60323.14294656681058683.4d17bdd8-7026-429a-846f-cf7836bc9e56-1024x576.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1{
+  text-align: center;
+  align-content: center;
+  width: fit-content;
+  margin: auto;
+  font-size: 100;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
