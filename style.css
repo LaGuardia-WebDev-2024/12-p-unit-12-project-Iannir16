@@ -1,4 +1,4 @@
-#movie-result {
+#Mob1-result {
   background: rgba(55, 139, 52, 0.336);
   border: 5px solid black;
   font-size: 24px;
@@ -7,7 +7,7 @@
   margin-bottom: 20px;
 }
 
-#book-result {
+#Mob2-result {
   background: rgba(126, 66, 26, 0.425);
   border: 5px solid black;
   font-size: 24px;
@@ -16,9 +16,28 @@
   margin-bottom: 20px;
 }
 
+#Mob3-result {
+  background: rgba(126, 66, 26, 0.425);
+  border: 5px solid black;
+  font-size: 24px;
+  min-height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#Mob4-result {
+  background: rgba(126, 66, 26, 0.425);
+  border: 5px solid black;
+  font-size: 24px;
+  min-height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
 hr {
   height: 5px;
-  background-color: black;
+  background-color: rgb(221, 200, 200);
 }
 
 body{
@@ -35,4 +54,9 @@ h1{
   margin: auto;
   font-size: 100;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+label{
+  color: rgb(255, 255, 255);
+  font-size: larger;
 }

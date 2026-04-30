@@ -24,69 +24,135 @@ Select ONE Additional Feature to Add
   
     <h1>Minecraft Quiz</h1>
     <hr />
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- Creeper Question -->
+    <form id="Mob1-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        👾Which mob was created from a glitch?
+        <select id="Mob1-answer">
+          <option value="Mob1">Enderman</option>
+          <option value="Mob2">Ocelot</option>
+          <option value="Mob3">Frog</option>
+          <option value="Mob4">Creeper</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
-    <div id="movie-result">
-      <p id="movie-text"></p>
+    <div id="Mob1-result">
+      <p id="Mob1-text"></p>
     </div>
     <hr />
-    <!-- Book Question -->
-    <form id="book-form">
+    <!-- Mushroom soup Question -->
+    <form id="Mob2-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+       🍄 What do you get from a Mooshroom Cow?
+        <select id="Mob2-answer">
+          <option value="Mob5">Mushroom soup</option>
+          <option value="Mob6">Milk</option>
+          <option value="Mob7">Mycelium</option>
+          <option value="Mob8">All of the Above</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
-    <div id="book-result">
-      <p id="book-text"></p>
+    <div id="Mob2-result">
+      <p id="Mob2-text"></p>
     </div>
+    <hr />
+    <!-- Endermites Question -->
+    <form id="Mob3-form">
+      <label>
+       🎆 What mob is an Enderman Afraid of?
+        <select id="Mob3-answer">
+          <option value="Mob9">Ender Dragon</option>
+          <option value="Mob10">Water</option>
+          <option value="Mob11">Endermites</option>
+          <option value="Mob12">Squids</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="Mob3-result">
+      <p id="Mob3-text"></p>
+    </div>
+    <hr />
+    <!-- Endermites Question -->
+    <form id="Mob4-form">
+      <label>
+       What effect do you get from Dolphins?
+        <select id="Mob4-answer">
+          <option value="Mob13">Underwater Breathing</option>
+          <option value="Mob14">Grace</option>
+          <option value="Mob15">Mining Fatigue</option>
+          <option value="Mob16">Poisoning</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="Mob4-result">
+      <p id="Mob4-text"></p>
+    </div>
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
-      //========================Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      //========================Creeper Question jQuery Code
+      $("#Mob1-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#Mob1-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
+        if (answer === "Mob4") {
+          $("#Mob1-text").text("YESSSS!");
         } 
         else {
-          $("#movie-text").text("Try Again!");
+          $("#Mob1-text").text("Try Again!");
         }
       });
 
-      //=======================Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      //=======================Mushroom soup Question jQuery Code
+      $("#Mob2-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#Mob2-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
+        if (answer === "Mob5") {
+          $("#Mob2-text").text("YESSSS!");
         } 
         else {
-          $("#book-text").text("Try Again!");
+          $("#Mob2-text").text("Try Again!");
+        }
+      });
+
+       //=======================Endermites Question jQuery Code
+      $("#Mob3-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#Mob3-answer");
+        var answer = $answer.val();
+
+        if (answer === "Mob11") {
+          $("#Mob3-text").text("YESSSS!");
+        } 
+        else {
+          $("#Mob3-text").text("Try Again!");
+        }
+      });
+
+       //=======================Mushroom soup Question jQuery Code
+      $("#Mob4-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#Mob4-answer");
+        var answer = $answer.val();
+
+        if (answer === "Mob14") {
+          $("#Mob4-text").text("YESSSS!");
+        } 
+        else {
+          $("#Mob4-text").text("Try Again!");
         }
       });
       
