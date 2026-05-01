@@ -28,12 +28,14 @@ Select ONE Additional Feature to Add
     <form id="Mob1-form">
       <label>
         👾Which mob was created from a glitch?
-        <select id="Mob1-answer">
+        
+          <select name="type" id="Mob1-answer">
           <option value="Mob1">Enderman</option>
           <option value="Mob2">Ocelot</option>
           <option value="Mob3">Frog</option>
           <option value="Mob4">Creeper</option>
-        </select>
+          </select>
+
       </label>
       <button type="submit">Check Answer</button>
     </form>
@@ -41,16 +43,20 @@ Select ONE Additional Feature to Add
       <p id="Mob1-text"></p>
     </div>
     <hr />
+
+
     <!-- Mushroom soup Question -->
     <form id="Mob2-form">
       <label>
        🍄 What do you get from a Mooshroom Cow?
-        <select id="Mob2-answer">
+        
+          <select name="type2" id="Mob2-answer">
           <option value="Mob5">Mushroom soup</option>
           <option value="Mob6">Milk</option>
           <option value="Mob7">Mycelium</option>
           <option value="Mob8">All of the Above</option>
-        </select>
+          </select>
+        
       </label>
       <button type="submit">Check Answer</button>
     </form>
@@ -58,16 +64,19 @@ Select ONE Additional Feature to Add
       <p id="Mob2-text"></p>
     </div>
     <hr />
+
     <!-- Endermites Question -->
     <form id="Mob3-form">
       <label>
        🎆 What mob is an Enderman Afraid of?
-        <select id="Mob3-answer">
+        
+          <select name="type3" id="Mob3-answer">
           <option value="Mob9">Ender Dragon</option>
           <option value="Mob10">Water</option>
           <option value="Mob11">Endermites</option>
           <option value="Mob12">Squids</option>
-        </select>
+          </select>
+        
       </label>
       <button type="submit">Check Answer</button>
     </form>
@@ -75,16 +84,19 @@ Select ONE Additional Feature to Add
       <p id="Mob3-text"></p>
     </div>
     <hr />
+
     <!-- Endermites Question -->
     <form id="Mob4-form">
       <label>
        What effect do you get from Dolphins?
-        <select id="Mob4-answer">
+   
+          <select name="type4" id="Mob4-answer">
           <option value="Mob13">Underwater Breathing</option>
           <option value="Mob14">Grace</option>
           <option value="Mob15">Mining Fatigue</option>
           <option value="Mob16">Poisoning</option>
-        </select>
+          </select>
+     
       </label>
       <button type="submit">Check Answer</button>
     </form>
@@ -95,19 +107,44 @@ Select ONE Additional Feature to Add
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+            //========================Creeper images Question jQuery Code
+            var mob1Images = {
+            Mob1: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/28/Enderman.png/revision/latest?cb=20240729214332",
+            Mob2: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0d/Ocelot.png/revision/latest?cb=20240729214742",
+            Mob3: "https://minecraft.wiki/images/Temperate_Frog_JE1_BE1.gif?5a0ff",
+            Mob4: "https://upload.wikimedia.org/wikipedia/en/4/49/Creeper_%28Minecraft%29.png",
+            };
+
       
       //========================Creeper Question jQuery Code
       $("#Mob1-form").on("submit", function (event) {
         event.preventDefault();
+
+            
+            
 
         var $answer = $("#Mob1-answer");
         var answer = $answer.val();
 
         if (answer === "Mob4") {
           $("#Mob1-text").text("YESSSS!");
+          $("#Mob1-text").css("color","white");
+                var $mobType = $(this).find("[name=#Mob1-answer]");
+                var mobType = $mobType.val();
+                var $img = $("<img>");
+                $img.width(100);
+                $img.attr("src",mob1Images[mobType]);
+                $img.appendTo("#Mob1-result");
         } 
         else {
           $("#Mob1-text").text("Try Again!");
+          $("#Mob1-text").css("color","white");
+                var $mobType = $(this).find("[name=type]");
+                var mobType = $mobType.val();
+                var $img = $("<img>");
+                $img.width(100);
+                $img.attr("src",mob1Images[mobType]);
+                $img.appendTo("#Mob1-result");
         }
       });
 
@@ -120,9 +157,12 @@ Select ONE Additional Feature to Add
 
         if (answer === "Mob5") {
           $("#Mob2-text").text("YESSSS!");
+          $("#Mob2-text").css("color","white");
+          
         } 
         else {
           $("#Mob2-text").text("Try Again!");
+           $("#Mob2-text").css("color","white");
         }
       });
 
@@ -135,13 +175,15 @@ Select ONE Additional Feature to Add
 
         if (answer === "Mob11") {
           $("#Mob3-text").text("YESSSS!");
+           $("#Mob3-text").css("color","white");
         } 
         else {
           $("#Mob3-text").text("Try Again!");
+          $("#Mob3-text").css("color","white");
         }
       });
 
-       //=======================Mushroom soup Question jQuery Code
+       //=======================Grace Question jQuery Code
       $("#Mob4-form").on("submit", function (event) {
         event.preventDefault();
 
@@ -150,9 +192,11 @@ Select ONE Additional Feature to Add
 
         if (answer === "Mob14") {
           $("#Mob4-text").text("YESSSS!");
+          $("#Mob4-text").css("color","white");
         } 
         else {
           $("#Mob4-text").text("Try Again!");
+          $("#Mob4-text").css("color","white");
         }
       });
       
