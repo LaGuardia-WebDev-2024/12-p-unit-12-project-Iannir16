@@ -3,7 +3,7 @@ Requirements
 [  ] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
-[  ] Include Three Images
+[yes] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -116,25 +116,24 @@ Select ONE Additional Feature to Add
             };
 
             var mob2Images = {
-            Mob5: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/28/Enderman.png/revision/latest?cb=20240729214332",
-            Mob6: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0d/Ocelot.png/revision/latest?cb=20240729214742",
-            Mob7: "https://minecraft.wiki/images/Temperate_Frog_JE1_BE1.gif?5a0ff",
-            Mob8: "https://upload.wikimedia.org/wikipedia/en/4/49/Creeper_%28Minecraft%29.png",
+            Mob5: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e0/Mushroom_Stew_JE2_BE2.png/revision/latest/thumbnail/width/360/height/360?cb=20190505052018",
+            Mob6: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/ca/Milk_Bucket_JE2_BE2.png/revision/latest/thumbnail/width/360/height/360?cb=20190430112534",
+            Mob7: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/86/Mycelium_JE2_BE2.png/revision/latest?cb=20200317185922",
             };
 
             var mob3Images = {
-            Mob9: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/28/Enderman.png/revision/latest?cb=20240729214332",
-            Mob10: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0d/Ocelot.png/revision/latest?cb=20240729214742",
-            Mob11: "https://minecraft.wiki/images/Temperate_Frog_JE1_BE1.gif?5a0ff",
-            Mob12: "https://upload.wikimedia.org/wikipedia/en/4/49/Creeper_%28Minecraft%29.png",
+            Mob9: "https://minecraft.wiki/images/thumb/Ender_Dragon.gif/250px-Ender_Dragon.gif?fb9ba",
+            Mob10: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/09/Water_JE16.png/revision/latest?cb=20220315035650",
+            Mob11: "https://static.wikia.nocookie.net/minecraftpocketedition/images/c/cf/Endermite.png/revision/latest?cb=20161111221138",
+            Mob12: "https://minecraft.wiki/images/Squid_JE2_BE2.gif?8a4c4",
             };
 
 
             var mob4Images = {
-            Mob13: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/28/Enderman.png/revision/latest?cb=20240729214332",
-            Mob14: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0d/Ocelot.png/revision/latest?cb=20240729214742",
-            Mob15: "https://minecraft.wiki/images/Temperate_Frog_JE1_BE1.gif?5a0ff",
-            Mob16: "https://upload.wikimedia.org/wikipedia/en/4/49/Creeper_%28Minecraft%29.png",
+            Mob13: "https://minecraft.wiki/images/Water_Breathing_JE2_BE2.png?cbfdc",
+            Mob14: "https://minecraft.wiki/images/Dolphin%27s_Grace_JE1.png?c89ca",
+            Mob15: "https://minecraft.wiki/images/Mining_Fatigue_JE3_BE2.png?7bb6c",
+            Mob16: "https://minecraft.wiki/images/Poison_JE3_BE2.png?ffec2",
             };
 
       
@@ -180,11 +179,23 @@ Select ONE Additional Feature to Add
         if (answer === "Mob5") {
           $("#Mob2-text").text("YESSSS!");
           $("#Mob2-text").css("color","white");
+          var $mobType = $(this).find("[name=#Mob2-answer]");
+                var mobType = $mobType.val();
+                var $img = $("<img>");
+                $img.width(100);
+                $img.attr("src",mob2Images[mobType]);
+                $img.appendTo("#Mob2-result");
           
         } 
         else {
           $("#Mob2-text").text("Try Again!");
            $("#Mob2-text").css("color","white");
+            var $mobType = $(this).find("[name=type2]");
+                var mobType = $mobType.val();
+                var $img = $("<img>");
+                $img.width(100);
+                $img.attr("src",mob2Images[mobType]);
+                $img.appendTo("#Mob2-result");
         }
       });
 
@@ -198,10 +209,22 @@ Select ONE Additional Feature to Add
         if (answer === "Mob11") {
           $("#Mob3-text").text("YESSSS!");
            $("#Mob3-text").css("color","white");
+           var $mobType = $(this).find("[name=#Mob3-answer]");
+                var mobType = $mobType.val();
+                var $img = $("<img>");
+                $img.width(100);
+                $img.attr("src",mob3Images[mobType]);
+                $img.appendTo("#Mob3-result");
         } 
         else {
           $("#Mob3-text").text("Try Again!");
           $("#Mob3-text").css("color","white");
+           var $mobType = $(this).find("[name=type3]");
+                var mobType = $mobType.val();
+                var $img = $("<img>");
+                $img.width(100);
+                $img.attr("src",mob3Images[mobType]);
+                $img.appendTo("#Mob3-result");
         }
       });
 
@@ -215,10 +238,22 @@ Select ONE Additional Feature to Add
         if (answer === "Mob14") {
           $("#Mob4-text").text("YESSSS!");
           $("#Mob4-text").css("color","white");
+          var $mobType = $(this).find("[name=#Mob4-answer]");
+                var mobType = $mobType.val();
+                var $img = $("<img>");
+                $img.width(100);
+                $img.attr("src",mob4Images[mobType]);
+                $img.appendTo("#Mob4-result");
         } 
         else {
           $("#Mob4-text").text("Try Again!");
           $("#Mob4-text").css("color","white");
+           var $mobType = $(this).find("[name=type4]");
+                var mobType = $mobType.val();
+                var $img = $("<img>");
+                $img.width(100);
+                $img.attr("src",mob4Images[mobType]);
+                $img.appendTo("#Mob4-result");
         }
       });
       
